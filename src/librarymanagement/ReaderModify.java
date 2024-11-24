@@ -34,13 +34,12 @@ public class ReaderModify {
 			while(rs.next())
 			{
 				Reader reader = new Reader();
-				reader.setReaderId(rs.getInt(1));
+				reader.setReaderId(rs.getInt("reader_id"));
 				reader.setSurname(rs.getString(2));
 				reader.setName(rs.getString(3));
 				reader.setIdentityCard(rs.getString(4));
 				reader.setPhoneNo(rs.getNString(5));
-				reader.setCardIssueDate(rs.getString(6));
-				reader.setJob(rs.getString(7));
+				reader.setJob(rs.getString(6));
 				readerList.add(reader);
 			}
 		} catch (Exception e) {
@@ -161,7 +160,7 @@ public class ReaderModify {
 			while(rs.next())
 			{
 				Reader reader = new Reader(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
-						rs.getString(6), rs.getString(7));
+						rs.getString(6));
 				readerList.add(reader);
 			}
 

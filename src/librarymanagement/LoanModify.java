@@ -65,14 +65,14 @@ public class LoanModify
 	{
 		int rowInserted = 0;
 		conn = ConnectDB.getConnection();
-		String sql = "call sp_addLoan(?,?,?)";
+		String sql = "call sp_addLoan(?,?,?,?)";
 		PreparedStatement stmt = null;
 		try {
 			stmt = conn.prepareStatement(sql);
 			stmt.setInt(1, loan.getReaderId());
 			stmt.setInt(2, loan.getBookId());
-//			stmt.setInt(3, loan.getLoanNo());
-			stmt.setString(3, loan.getBookReturnAppointmentDate());
+			stmt.setInt(3, loan.getLoanNo());
+			stmt.setString(4, loan.getBookReturnAppointmentDate());
 			rowInserted = stmt.executeUpdate();
 //			rowInserted = stmt.executeUpdate();
 //			System.out.println(stmt.execute());
@@ -128,7 +128,7 @@ public class LoanModify
 			stmt.setInt(1, ReaderId);
 			stmt.execute();
 			ResultSet rs = stmt.executeQuery();
-			while(rs.next())
+			if(rs.next())
 			{
 				reader.setName(rs.getString(1));
 			}
@@ -159,7 +159,7 @@ public class LoanModify
 			stmt.setInt(1, BookId);
 			stmt.execute();
 			ResultSet rs = stmt.executeQuery();
-			while(rs.next())
+			if(rs.next())
 			{
 				book.setBookName(rs.getString(1));
 			}
@@ -215,35 +215,32 @@ public class LoanModify
 		return loanList;
 	}
 	
-	public String checkTimeSpace(String madocgia)
-	{
-		String timeSpace = null;
-		conn = ConnectDB.getConnection();
-		String sql = "select fc_time_space(?)";
-		PreparedStatement stmt = null;
-		try {
-			stmt = conn.prepareStatement(sql);
-			stmt.setInt(1, Integer.parseInt(madocgia));
-			stmt.execute();
-			ResultSet rs = stmt.executeQuery();
-			while(rs.next())
-			{
-				timeSpace = rs.getString(1);
-				System.out.println(timeSpace);
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally
-		{
-			try
-			{
-				stmt.close();
-				conn.close();
-			} catch(Exception e)
-			{
-				e.printStackTrace();
-			}
-		}
-		return timeSpace;
-	}
+        public String checkBooksInLastWeek(String madocgia) {
+            String bookCount = "0"; 
+            conn = ConnectDB.getConnection();
+            String sql = "SELECT fc_books_in_last_week(?)";
+            PreparedStatement stmt = null;
+    
+            try {
+                stmt = conn.prepareStatement(sql);
+                stmt.setInt(1, Integer.parseInt(madocgia));
+                ResultSet rs = stmt.executeQuery();
+        
+                if (rs.next()) {
+                    bookCount = rs.getString(1); 
+                    System.out.println(bookCount);
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } finally {
+                try {
+                    if (stmt != null) stmt.close();
+                    if (conn != null) conn.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            return bookCount;
+        }
+
 }

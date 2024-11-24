@@ -3,8 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/LibraryManagement/LibraryManagement/src/librarymanagement/ReaderManagement.java</file>
-            <file>file:/C:/LibraryManagement/LibraryManagement/src/librarymanagement/BookManagement1.java</file>
+            <file>file:/C:/LibraryManagement/src/librarymanagement/Loan.java</file>
+            <file>file:/C:/LibraryManagement/src/librarymanagement/LoanUI.java</file>
+            <file>file:/C:/LibraryManagement/src/librarymanagement/StatisticModify.java</file>
+            <file>file:/C:/LibraryManagement/src/librarymanagement/Punishment.java</file>
+            <file>file:/C:/LibraryManagement/src/librarymanagement/ReaderManagementUI.java</file>
+            <file>file:/C:/LibraryManagement/src/librarymanagement/LoginModify.java</file>
+            <file>file:/C:/LibraryManagement/src/librarymanagement/BookManagementUI.java</file>
+            <file>file:/C:/LibraryManagement/src/librarymanagement/PunishmentModify.java</file>
+            <file>file:/C:/LibraryManagement/src/librarymanagement/Book.java</file>
+            <file>file:/C:/LibraryManagement/src/librarymanagement/BookModify.java</file>
+            <file>file:/C:/LibraryManagement/src/librarymanagement/StatisticUI.java</file>
         </group>
     </open-files>
 </project-private>
