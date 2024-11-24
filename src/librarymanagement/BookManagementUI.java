@@ -331,7 +331,10 @@ public class BookManagementUI extends javax.swing.JFrame {
             }
         }	
     }
-   
+    //private void btnBackToDashboardActionPerformed(ActionEvent evt) {
+    //    dashboard.setVisible(true);  // Show the Dashboard
+        //this.dispose();  // Close the current BookManagementUI window
+   // }
     private void btnResetBookActionPerformed(ActionEvent evt)
     {
         tfBookName.setText(null);
@@ -351,7 +354,7 @@ public class BookManagementUI extends javax.swing.JFrame {
         {
             bookModify.deleteBook(Integer.parseInt(String.valueOf(table.getValueAt(table.getSelectedRow(), 0))));
             findAllBook();
-	} catch(IndexOutOfBoundsException e)
+	}catch(IndexOutOfBoundsException e)
 	{
             JOptionPane.showInternalMessageDialog(cont,"Vui lòng chọn hàng cần xóa");
 	}
@@ -413,7 +416,7 @@ public class BookManagementUI extends javax.swing.JFrame {
 		
 	}
 	
-    private void btnAddBookActionPerformed(ActionEvent evt)
+	private void btnAddBookActionPerformed(ActionEvent evt)
 	{
 		Book book = new Book();
 		if(tfBookName.getText().length()==0  || tfAmount.getText().length()==0)
@@ -465,7 +468,7 @@ public class BookManagementUI extends javax.swing.JFrame {
 			findAllBook();
 		}
 	}
-    public void sortAZPageNo()
+        public void sortAZPageNo()
 	{
 		Vector<Book> bookList = new Vector();
 		if(cbbSort.getSelectedItem().equals("Tăng dần theo số trang"))
@@ -489,7 +492,8 @@ public class BookManagementUI extends javax.swing.JFrame {
 		
 	}
 	//find information
-    public void findAllBook()
+	
+	public void findAllBook()
 	{
 		Vector<Book> bookList = bookModify.getBookList();
 		String[] columnNames = {"Mã sách", "Tên sách", "Số trang", "Ngôn ngữ", "Giá trị", "Số lượng còn", "Năm xuất bản", "Thể loại", "Tác giả", "Nhà xuất bản"}; 
@@ -502,7 +506,9 @@ public class BookManagementUI extends javax.swing.JFrame {
 											book.getAmount(),book.getPublishYear(),book.getType(),book.getAuthor(),book.getPublisher()});
 		}
 	}
-    public void findBookBy(String sql, String parameter)
+	
+	
+	public void findBookBy(String sql, String parameter)
 	{
 		Vector<Book> bookList = bookModify.findBookBy(sql, parameter);
 		String[] columnNames = {"Mã sách", "Tên sách", "Số trang", "Ngôn ngữ", "Giá trị", "Số lượng còn", "Năm xuất bản", "Thể loại", " Tác giả", " Nhà xuất bản"}; 
@@ -516,9 +522,7 @@ public class BookManagementUI extends javax.swing.JFrame {
 											book.getAmount(),book.getPublishYear(),book.getType(),book.getAuthor(),book.getPublisher()});
 		}
 	}
-        public static void main(String[] args) {
-            new BookManagementUI();
-        }
-    }
 	
+	
+}
 	

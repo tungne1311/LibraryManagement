@@ -41,7 +41,7 @@ public class StatisticUI extends JFrame {
         lblStatisticTotalBook = createLabel("TỔNG SỐ SÁCH: ", 240, 210);
         lblStatisticTotalLoan = createLabel("TỔNG SỐ PHIẾU MƯỢN: ", 240, 325);
         lblStatisticLoan = createLabel("SÁCH ĐANG CHO MƯỢN: ", 240, 435);
-        lblStatisticPunish = createLabel("SÁCH TRỄ HẠN: ", 240, 545);
+        lblStatisticPunish = createLabel("SÁCH ĐANG TRỄ HẠN: ", 240, 545);
         
         getStatistic();
 
@@ -93,10 +93,7 @@ public class StatisticUI extends JFrame {
 		lblStatisticTotalBook.setText("Tổng số sách: "+statisticModify.getStatisticTotalBook());
 		lblStatisticTotalLoan.setText("Tổng số phiếu mượn sách: "+statisticModify.getStatisticTotalLoan());
 		lblStatisticLoan.setText("Sách đang cho mượn: "+statisticModify.getStatisticLoan());
-		lblStatisticPunish.setText("Sách bị trễ hạn trả: "+statisticModify.getStatisticPunish());
-    }
-    public static void main(String[] args) {
-        new StatisticUI();
+		lblStatisticPunish.setText("Sách đang bị trễ hạn trả: "+statisticModify.getStatisticPunish());
     }
 
 }
