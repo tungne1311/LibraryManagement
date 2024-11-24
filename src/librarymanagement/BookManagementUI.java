@@ -65,7 +65,7 @@ public class BookManagementUI extends javax.swing.JFrame {
         JLabel bookImage = new JLabel();
         try {
             // Tải và thay đổi kích thước hình ảnh
-            ImageIcon imageIcon = resizeImage("src/images/quanlysach.jpg", 606, 200); // Đường dẫn và kích thước mong muốn
+            ImageIcon imageIcon = resizeImage("src/images/book_img.jpg", 606, 200); // Đường dẫn và kích thước mong muốn
             bookImage.setIcon(imageIcon);
         } catch (Exception e) {
             System.out.println("Không thể tải hình ảnh: " + e.getMessage());
@@ -525,4 +525,3 @@ public class BookManagementUI extends javax.swing.JFrame {
 	
 	
 }
-	

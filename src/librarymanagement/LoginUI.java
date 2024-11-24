@@ -27,57 +27,28 @@ public class LoginUI extends JFrame {
         cont = this.getContentPane();
         cont.setLayout(null);
 
-        // Bên trái - Hình ảnh (leftPanel)
         JPanel leftPanel = new JPanel();
         leftPanel.setBounds(0, 0, 600, 720);
         leftPanel.setLayout(new BorderLayout());
         leftPanel.setBackground(new Color(255, 222, 89));
 
-        // Tạo hình ảnh với ImageIcon
-        ImageIcon imgIcon = new ImageIcon("src\\images\\login_image.jpg");
+        ImageIcon imgIcon = new ImageIcon("src\\images\\login_img.jpg");
 
-        // Điều chỉnh kích thước hình ảnh sao cho vừa với panel mà không bị méo
         Image img = imgIcon.getImage();
-        Image scaledImg = img.getScaledInstance(600, 580, Image.SCALE_SMOOTH); // Điều chỉnh chiều cao thành 300 để chiếm phần trên cùng
-        imgIcon = new ImageIcon(scaledImg);  // Cập nhật lại ImageIcon với hình ảnh đã được chỉnh lại kích thước
+        Image scaledImg = img.getScaledInstance(600, 720, Image.SCALE_SMOOTH); 
+        imgIcon = new ImageIcon(scaledImg);  
 
-        // Tạo JLabel để hiển thị hình ảnh
         JLabel imgLabel = new JLabel(imgIcon);
 
-        // Thêm JLabel vào phần trên cùng của leftPanel
-        leftPanel.add(imgLabel, BorderLayout.NORTH); // Sử dụng BorderLayout.NORTH để đặt hình ảnh lên trên cùng
-        
-        // Tạo BoxLayout cho phần dưới (văn bản)
-        JPanel textPanel = new JPanel();
-        textPanel.setBackground(new Color(255, 222, 89));
-        textPanel.setBounds(0, 580, 600, 100);
+        leftPanel.add(imgLabel); 
 
-        // Tạo JLabel cho dòng chữ và căn giữa
-        JLabel quoteLabel1 = new JLabel("Sách là chất gây nghiện hợp pháp duy nhất!");
-        quoteLabel1.setFont(new Font("Arial", Font.ITALIC, 28)); // Phông chữ in nghiêng
-        quoteLabel1.setForeground(Color.BLACK);
-        quoteLabel1.setAlignmentX(Component.CENTER_ALIGNMENT); // Căn giữa
-
-        JLabel quoteLabel2 = new JLabel("- Andrea Aybar -");
-        quoteLabel2.setFont(new Font("Arial", Font.ITALIC, 28)); // Phông chữ in nghiêng
-        quoteLabel2.setForeground(Color.BLACK);
-        quoteLabel2.setAlignmentX(Component.CENTER_ALIGNMENT); // Căn giữa
-
-        // Thêm các dòng vào textPanel
-        textPanel.add(quoteLabel1);
-        textPanel.add(Box.createVerticalStrut(10)); // Thêm khoảng cách giữa các dòng
-        textPanel.add(quoteLabel2);
-
-        // Thêm textPanel vào leftPanel
-        leftPanel.add(textPanel);
-        
         cont.add(leftPanel);
         
         // Bên phải - Các thành phần chức năng đăng nhập (rightPanel)
         JPanel rightPanel = new JPanel();
         rightPanel.setLayout(null);
         rightPanel.setBounds(600, 0, 600, 720);
-        rightPanel.setBackground(new Color(255, 189, 89));
+        rightPanel.setBackground(new Color(255, 228, 196));
 
         // Nhãn "Đăng nhập"
         JLabel lblLogin = new JLabel("Đăng nhập");
@@ -112,13 +83,14 @@ public class LoginUI extends JFrame {
         // Nút "Đăng nhập"
         btnLogin = new JButton("Đăng nhập");
         btnLogin.setFont(new Font("Arial", Font.BOLD, 42));
-        btnLogin.setBackground(new Color(255, 87, 87));
+        btnLogin.setBackground(new Color(205, 175, 149));
         btnLogin.setBounds(160, 450, 300, 70);
         rightPanel.add(btnLogin);
 
         // Nút "Chưa có tài khoản? Đăng ký ngay"
         btnRegister = new JButton("Chưa có tài khoản? Đăng ký ngay");
         btnRegister.setFont(new Font("Arial", Font.BOLD, 24));
+        btnRegister.setForeground(new Color(205, 85, 85));
         btnRegister.setBounds(80, 600, 450, 50);
         btnRegister.setContentAreaFilled(false);
         btnRegister.setBorderPainted(false);
@@ -156,5 +128,5 @@ public class LoginUI extends JFrame {
             }
         });
     }
-
+   
 }

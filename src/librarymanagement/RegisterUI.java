@@ -31,54 +31,20 @@ public class RegisterUI extends JFrame {
         JPanel rightPanel = new JPanel();
         rightPanel.setBounds(600, 0, 600, 720);
         rightPanel.setLayout(new BorderLayout());
-        rightPanel.setBackground(new Color(255, 222, 89));
 
         // Tạo hình ảnh với ImageIcon
-        ImageIcon imgIcon = new ImageIcon("src\\images\\register_image.jpg");
+        ImageIcon imgIcon = new ImageIcon("src\\images\\register_img.jpg");
 
         // Điều chỉnh kích thước hình ảnh sao cho vừa với panel mà không bị méo
         Image img = imgIcon.getImage();
-        Image scaledImg = img.getScaledInstance(600, 580, Image.SCALE_SMOOTH);
+        Image scaledImg = img.getScaledInstance(600, 720, Image.SCALE_SMOOTH);
         imgIcon = new ImageIcon(scaledImg);  // Cập nhật lại ImageIcon với hình ảnh đã được chỉnh lại kích thước
 
         // Tạo JLabel để hiển thị hình ảnh
         JLabel imgLabel = new JLabel(imgIcon);
 
         // Thêm JLabel vào phần trên cùng của rightPanel
-        rightPanel.add(imgLabel, BorderLayout.NORTH);
-
-        // Tạo BoxLayout cho phần dưới (văn bản)
-        JPanel textPanel = new JPanel();
-        textPanel.setBackground(new Color(255, 222, 89));
-        textPanel.setBounds(0, 580, 600, 100);
-        textPanel.setLayout(new BoxLayout(textPanel, BoxLayout.Y_AXIS)); // BoxLayout theo chiều dọc
-
-        // Tạo JLabel cho các câu và căn giữa
-        JLabel quoteLabel1 = new JLabel("Sách là đứa con của tri thức,");
-        quoteLabel1.setFont(new Font("Arial", Font.ITALIC, 28)); // Phông chữ in nghiêng
-        quoteLabel1.setForeground(Color.BLACK);
-        quoteLabel1.setAlignmentX(Component.CENTER_ALIGNMENT); // Căn giữa
-
-        JLabel quoteLabel2 = new JLabel("vì vậy đừng bỏ việc đọc sách!");
-        quoteLabel2.setFont(new Font("Arial", Font.ITALIC, 28)); // Phông chữ in nghiêng
-        quoteLabel2.setForeground(Color.BLACK);
-        quoteLabel2.setAlignmentX(Component.CENTER_ALIGNMENT); // Căn giữa
-
-        JLabel quoteLabel3 = new JLabel("- J97 -");
-        quoteLabel3.setFont(new Font("Arial", Font.ITALIC, 28)); // Phông chữ in nghiêng
-        quoteLabel3.setForeground(Color.BLACK);
-        quoteLabel3.setAlignmentX(Component.CENTER_ALIGNMENT); // Căn giữa
-
-        // Thêm các câu vào textPanel
-        textPanel.add(quoteLabel1);
-        textPanel.add(Box.createVerticalStrut(5)); // Khoảng cách giữa các câu
-        textPanel.add(quoteLabel2);
-        textPanel.add(Box.createVerticalStrut(5)); // Khoảng cách giữa các câu
-        textPanel.add(quoteLabel3);
-
-        // Thêm textPanel vào rightPanel
-        rightPanel.add(textPanel);
-
+        rightPanel.add(imgLabel);
 
         // Thêm rightPanel vào container chính
         cont.add(rightPanel);
@@ -87,7 +53,7 @@ public class RegisterUI extends JFrame {
         JPanel leftPanel = new JPanel();
         leftPanel.setLayout(null);
         leftPanel.setBounds(0, 0, 600, 720);
-        leftPanel.setBackground(new Color(255, 189, 89));
+        leftPanel.setBackground(new Color(191, 239, 255));
 
         // Nhãn "Đăng ký"
         JLabel lblRegister = new JLabel("Đăng ký");
@@ -134,13 +100,14 @@ public class RegisterUI extends JFrame {
         // Nút "Đăng ký"
         btnRegister = new JButton("Đăng ký");
         btnRegister.setFont(new Font("Arial", Font.BOLD, 42));
-        btnRegister.setBackground(new Color(255, 87, 87));
+        btnRegister.setBackground(new Color(0, 205, 205));
         btnRegister.setBounds(160, 520, 300, 70);
         leftPanel.add(btnRegister);
 
         // Nút "Đã có tài khoản? Đăng nhập"
-        btnLogin = new JButton("Đã có tài khoản? Đăng nhập");
+        btnLogin = new JButton("Đã có tài khoản? Đăng nhập ngay");
         btnLogin.setFont(new Font("Arial", Font.BOLD, 24));
+        btnLogin.setForeground(new Color(0, 139, 69));
         btnLogin.setBounds(80, 610, 450, 50);
         btnLogin.setContentAreaFilled(false);
         btnLogin.setBorderPainted(false);
@@ -190,5 +157,5 @@ public class RegisterUI extends JFrame {
             }
         });
     }
-
+    
 }

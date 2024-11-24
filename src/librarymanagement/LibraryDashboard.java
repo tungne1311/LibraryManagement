@@ -66,7 +66,7 @@ public class LibraryDashboard extends JFrame {
 
         // Tạo logo
         JLabel logoLabel = new JLabel();
-        ImageIcon logoIcon = new ImageIcon("src\\images\\result_logo_ptit1.png");
+        ImageIcon logoIcon = new ImageIcon("src\\images\\logo_ptit.png");
 
         logoLabel.setIcon(logoIcon);
 
@@ -90,7 +90,7 @@ public class LibraryDashboard extends JFrame {
 
         JLabel imageLabel = new JLabel();
         imageLabel.setPreferredSize(new Dimension(400, 442));
-        ImageIcon imageIcon = new ImageIcon("src\\images\\result_dashboard4.png");
+        ImageIcon imageIcon = new ImageIcon("src\\images\\dashboard.png");
         imageLabel.setIcon(imageIcon);
 
         gbc.gridy = 1;
@@ -106,10 +106,10 @@ public class LibraryDashboard extends JFrame {
         rightPanel.setBackground(new Color(253, 243, 221));
         rightPanel.setLayout(new GridLayout(2, 2, 20, 20));
 
-        btnManageBooks = createButtonWithAction("Quản Lý Sách", new Color(202, 170, 205), "src\\images\\book_icon.png", e -> openBookManagement());
-        btnManageReaders = createButtonWithAction("Quản Lý Độc Giả", new Color(203, 150, 46), "src\\images\\book_icon.png", e -> openReaderManagement());
-        btnLoanReturn = createButtonWithAction("Mượn Trả Sách", new Color(239, 96, 30), "src\\images\\book_icon.png", e -> openLoanReturn());
-        btnStatistics = createButtonWithAction("Thống Kê", new Color(255, 216, 63), "src\\images\\book_icon.png", e -> openStatistics());
+        btnManageBooks = createButtonWithAction("Quản Lý Sách", new Color(202, 170, 205), "src\\images\\btn_icon.png", e -> openBookManagement());
+        btnManageReaders = createButtonWithAction("Quản Lý Độc Giả", new Color(203, 150, 46), "src\\images\\btn_icon.png", e -> openReaderManagement());
+        btnLoanReturn = createButtonWithAction("Mượn Trả Sách", new Color(239, 96, 30), "src\\images\\btn_icon.png", e -> openLoanReturn());
+        btnStatistics = createButtonWithAction("Thống Kê", new Color(255, 216, 63), "src\\images\\btn_icon.png", e -> openStatistics());
 
         rightPanel.add(btnManageBooks);
         rightPanel.add(btnManageReaders);

@@ -95,7 +95,7 @@ public class LoanUI extends JFrame {
         
         JLabel imageLabel = new JLabel();
         try {
-            ImageIcon imageIcon = new ImageIcon("src\\images\\quanlydocgia2.jpg");
+            ImageIcon imageIcon = new ImageIcon("src\\images\\loan_img.jpg");
             imageLabel.setIcon(imageIcon);
         } catch (Exception e) {
             System.out.println("Không thể tải hình ảnh: " + e.getMessage());
