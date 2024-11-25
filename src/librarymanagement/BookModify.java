@@ -149,9 +149,7 @@ public class BookModify
 			}
 		}
 	}
-	
-
-//	
+		
 	public Vector<Book> findBookBy(String sql, String parameter)
 	{
 		Vector<Book> bookList = new Vector();

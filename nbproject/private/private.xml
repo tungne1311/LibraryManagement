@@ -6,13 +6,18 @@
             <file>file:/C:/LibraryManagement/src/librarymanagement/Loan.java</file>
             <file>file:/C:/LibraryManagement/src/librarymanagement/LoanUI.java</file>
             <file>file:/C:/LibraryManagement/src/librarymanagement/StatisticModify.java</file>
-            <file>file:/C:/LibraryManagement/src/librarymanagement/Punishment.java</file>
-            <file>file:/C:/LibraryManagement/src/librarymanagement/ReaderManagementUI.java</file>
+            <file>file:/C:/LibraryManagement/src/database/qlthuvien%20(2).sql</file>
+            <file>file:/C:/LibraryManagement/src/librarymanagement/RegisterUI.java</file>
             <file>file:/C:/LibraryManagement/src/librarymanagement/LoginModify.java</file>
             <file>file:/C:/LibraryManagement/src/librarymanagement/BookManagementUI.java</file>
+            <file>file:/C:/LibraryManagement/src/librarymanagement/LibraryDashboard.java</file>
             <file>file:/C:/LibraryManagement/src/librarymanagement/PunishmentModify.java</file>
             <file>file:/C:/LibraryManagement/src/librarymanagement/Book.java</file>
             <file>file:/C:/LibraryManagement/src/librarymanagement/BookModify.java</file>
+            <file>file:/C:/LibraryManagement/src/librarymanagement/Main.java</file>
+            <file>file:/C:/LibraryManagement/src/librarymanagement/Punishment.java</file>
+            <file>file:/C:/LibraryManagement/src/librarymanagement/ReaderManagementUI.java</file>
+            <file>file:/C:/LibraryManagement/src/librarymanagement/LoginUI.java</file>
             <file>file:/C:/LibraryManagement/src/librarymanagement/StatisticUI.java</file>
         </group>
     </open-files>
